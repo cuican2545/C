@@ -1,0 +1,107 @@
+#问题一
+#3-1
+#数字的三个内置类名称为浮点值 numeric、整数integer、复数complex
+#3-2
+#用levers（）函数查找因子的水平值
+#3-3
+#用as.numeric（）函数将字符串转换为数字
+#3-4
+#有几个函数可以用于检视变量，其中包括summary、head、str、unclass、attributes和View
+#3-5
+#用rm(list=ls())删除所有变量
+#问题二
+#练习3-1
+class(Inf)
+class(NA)
+class(NaN)
+class("")
+typeof(Inf)
+typeof(NA)
+typeof(NaN)
+typeof("")
+mode(Inf)
+mode(Inf)
+mode(NA)
+mode(NaN)
+mode("")
+#练习3-2
+x<-sample(c("dog","cat","dolphin","hamster","goldfish"),100,TRUE,NULL)
+x
+b<-factor(x)
+summary(b)
+#练习3-3
+peach<-1
+plum<-"fruity"
+pear<-TRUE
+ls(pattern="a")
+#问题三
+#问题4-1
+#seq.int(0,0.25,0.5,0.75,1)
+#问题4-2
+#names()函数和value()函数
+#问题4—3
+#正数索引、负数索引、逻辑索引、字符向量索引
+#问题4-4
+#dim=c(3,4,6) length(dim) 长度为3
+#问题4-5
+#矩阵*矩阵
+#问题四
+#练习4-1
+c<-seq(11,50,by=3)
+c
+c-c(2,3)
+#练习4-2
+d<-seq(1.1,4,by=20)
+d
+d-c(4,5,8,9)
+#练习4-3
+c(1,2,4,6)+c(8,0,-1,-4)
+c(1,2,4,6)-c(8,0,-1,-4)
+c(1,2,4,6)*c(8,0,-1,-4)
+c(1,2,4,6)/c(8,0,-1,-4)
+#问题五
+#练习4-1
+n<-c(1:50)
+e<-c(n*(n+1)/2)
+e
+names(e)<-letters[1:15]
+e[c("a","e","i","o","u")]
+#练习4-2
+diag(c(10,9,8,7,6,5,4,3,2,1,0,1,2,3,4,5,6,7,8,9,10,11),21,21)
+#问题六
+#问题5-1
+#a<-list(alpha=1,list(beta=2,gamma=3,delta=4),eta=NULL) length(a)
+#问题5-2
+#成对列表仅在内部使用，在使用formals时才会被显示调用
+#问题5-3
+#使用data.frame()函数，row.names()函数
+#问题5-4
+#使用data.frame()函数传入check.names=FALSE关闭
+#问题5-5
+#使用cbind和rbind把它们连接起来
+#问题七
+# 练习5-1
+m1=matrix(0:99,nrow=10,ncol=10,byrow=T)
+m1
+list=apply(
+    m1,MARGIN=1,
+    function(m1)
+    {
+        m1[round(sqrt(m1))^2==m1]
+    })
+list
+#练习5-2
+iris
+data.frame(iris)
+mean(iris[ ,1])
+mean(iris[ ,2])
+mean(iris[ ,3])
+mean(iris[ ,4])
+#练习5-3
+beaver1$id<-1
+beaver2$id<-2
+#在beaver1和beaver2中添加id列使其各等于1和2
+both_beavers<-rbind(beaver1,beaver2)
+#垂直拼接beaver1和beaver2
+subset(both_beavers,as.logical(activ))
+#使用subset()函数，去掉等于0的所有元素
